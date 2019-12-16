@@ -1,0 +1,10 @@
+.WhiteButton {
+  color: $color-primary;
+  border: $border-width-base solid $color-primary;
+  background-color: $color-white;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+}

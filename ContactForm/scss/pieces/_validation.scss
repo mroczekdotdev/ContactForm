@@ -1,0 +1,10 @@
+.validation {
+  color: $color-warning;
+  font-size: $font-size-sm;
+
+  > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+}

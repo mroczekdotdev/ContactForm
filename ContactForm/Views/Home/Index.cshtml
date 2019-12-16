@@ -1,0 +1,49 @@
+﻿@model FormViewModel
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<form class="ContactForm" method="post">
+    <header class="formHeader">
+        <h1>Contact Us</h1>
+    </header>
+    <section class="formInputs">
+        <div class="formGroup">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" />
+            <span asp-validation-for="FirstName" class="validation"></span>
+        </div>
+        <div class="formGroup">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" />
+            <span asp-validation-for="LastName" class="validation"></span>
+        </div>
+        <div class="formGroup">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email" class="validation"></span>
+        </div>
+        <div class="formGroup">
+            <label asp-for="Phone"></label>
+            <input asp-for="Phone" />
+            <span asp-validation-for="Phone" class="validation"></span>
+        </div>
+        <div class="formGroup">
+            <label asp-for="Subject"></label>
+            <select asp-for="Subject" asp-items="Html.GetEnumNameSelectList<Subject>()"></select>
+        </div>
+        <div class="formGroup">
+            <label asp-for="Message"></label>
+            <textarea asp-for="Message"></textarea>
+            <span asp-validation-for="Message" class="validation"></span>
+        </div>
+        <button class="WhiteButton" type="submit">Submit</button>
+    </section>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ScriptsPartial");
+    }
+}

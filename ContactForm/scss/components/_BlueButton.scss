@@ -1,0 +1,10 @@
+.BlueButton {
+  color: $color-white;
+  border: $border-width-base solid $color-white;
+  background-color: $color-primary;
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-white;
+  }
+}

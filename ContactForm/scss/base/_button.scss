@@ -1,0 +1,13 @@
+button,
+.button {
+  display: inline-block;
+  padding: $space-sm;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-xs;
+  text-align: center;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+
+  text-decoration: none;
+}

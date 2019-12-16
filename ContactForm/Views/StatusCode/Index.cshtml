@@ -1,0 +1,31 @@
+﻿@using Microsoft.Extensions.Primitives
+
+@{
+    ViewData["Title"] = "Page not found";
+}
+
+<div class="StatusCodePage">
+    <header>
+        <h1>Oops!</h1>
+    </header>
+    <p>
+        We are sorry, the page you are looking for cannot be found.
+    </p>
+
+    @{
+        var value = Context.Request.Query["code"];
+        if (!StringValues.IsNullOrEmpty(value))
+        {
+            <p>
+                <strong>Error Code:</strong> <code>@value[0]</code>
+            </p>
+        }
+    }
+
+    <p class="emojiSticker">&#x1f63f;</p>
+    <span class="paragraph">Do not worry, you can still leave us a message:</span>
+    <a class="BlueButton button" asp-controller="@HomeController.Name" asp-action="@nameof(HomeController.Index)">Contact Us</a>
+</div>
+
+@section Scripts {
+}

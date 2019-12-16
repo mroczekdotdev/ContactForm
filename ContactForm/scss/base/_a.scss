@@ -1,0 +1,15 @@
+a:not(.button) {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:active,
+  &:hover {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: desaturate($color-primary, 60%);
+    text-decoration: underline;
+  }
+}

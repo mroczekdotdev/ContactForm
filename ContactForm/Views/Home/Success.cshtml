@@ -1,0 +1,21 @@
+﻿@model SuccessViewModel
+
+@{
+    ViewData["Title"] = "Thank You!";
+}
+
+<div class="SuccessPage">
+    <header>
+        <h1>Thank You @Model.Name!</h1>
+    </header>
+    <p>
+        We love to hear from you. Thank you for taking the time to contact us.<br>
+        To ensure that you receive our reply, please add <b>contact@contactform.com</b> to contacts.
+    </p>
+    <p class="emojiSticker">&#x1F63A;</p>
+    <span class="paragraph">Leave us another message if you want to:</span>
+    <a class="BlueButton button" asp-controller="@HomeController.Name" asp-action="@nameof(HomeController.Index)">Contact Us</a>
+</div>
+
+@section Scripts {
+}

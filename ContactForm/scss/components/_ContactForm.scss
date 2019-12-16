@@ -1,0 +1,67 @@
+.ContactForm {
+  width: 400px;
+
+  > .formHeader {
+    padding: 0 $space-lg $space-base $space-lg;
+    color: $color-white;
+  }
+
+  > .formInputs {
+    text-align: center;
+    width: 100%;
+    padding: $space-lg;
+    border-radius: $border-radius-lg;
+    background-color: $color-white;
+
+    > .formGroup {
+      text-align: left;
+
+      > label {
+        display: block;
+        width: 100%;
+        font-size: $font-size-sm;
+      }
+
+      > input,
+      select,
+      textarea {
+        display: block;
+        width: 100%;
+        margin-top: $space-xs;
+        padding: $space-sm;
+        border-radius: $border-radius-base;
+        border: $border-width-sm solid $color-lightgray;
+        background-color: $color-lightgray;
+
+        &::placeholder {
+          color: $color-gray;
+        }
+
+        &:focus {
+          border-color: $color-gray;
+          background-color: $color-white;
+        }
+      }
+
+      select {
+        cursor: pointer;
+      }
+
+      > textarea {
+        width: 100%;
+        height: 6rem;
+        min-height: 6rem;
+        max-height: 12rem;
+        resize: vertical;
+      }
+
+      &:nth-child(n + 2) {
+        margin-top: $space-base;
+      }
+    }
+
+    .WhiteButton {
+      margin-top: $space-lg;
+    }
+  }
+}

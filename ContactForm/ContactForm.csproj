@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>MroczekDotDev.ContactForm</RootNamespace>
+  </PropertyGroup>
+
+  <Target Name="Webpack" AfterTargets="Build">
+    <Exec Command="npm run build" ContinueOnError="true" />
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>
