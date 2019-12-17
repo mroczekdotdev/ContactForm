@@ -20,9 +20,9 @@ GO
 CREATE PROCEDURE AddForm
 (
     @FirstName NVARCHAR(50),
-    @LastName NVARCHAR(50),
+    @LastName NVARCHAR(50) = NULL,
     @Email VARCHAR(50),
-    @Phone VARCHAR(20),
+    @Phone VARCHAR(20) = NULL,
     @Subject NVARCHAR(100),
     @Message NVARCHAR(MAX)
 )
